@@ -1,0 +1,102 @@
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body background and font */
+body.backgroundColor {
+    background: linear-gradient(135deg, #141e30, #243b55); /* Dark blue gradient */
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0; /* Light text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Heading styling */
+h3 {
+    color: #00adb5;
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Container for buttons and result */
+.buttons, .para {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin-top: 30px;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+/* Button styling */
+.buttons button {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.4s;
+    background: linear-gradient(145deg, #00adb5, #00c3c9); /* Gradient button */
+    box-shadow: 0px 5px 15px rgba(0, 173, 181, 0.4);
+}
+
+.buttons button:hover {
+    transform: translateY(-5px); /* Lifts button on hover */
+    box-shadow: 0px 8px 20px rgba(0, 173, 181, 0.6);
+}
+
+/* Image styling */
+img {
+    width: 180px;
+    margin-top: 30px;
+    opacity: 0.9;
+    transition: opacity 0.4s ease, transform 0.3s ease; /* Adds smooth fade and zoom effects */
+}
+
+img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    opacity: 1;
+}
+
+/* Result message styling */
+.para {
+    color: #ffd369;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Toss again button */
+.bttn {
+    background: linear-gradient(145deg, #e94560, #f05466); /* Gradient button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.4s;
+    box-shadow: 0px 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+.bttn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(233, 69, 96, 0.6);
+    background: linear-gradient(145deg, #f05466, #e94560);
+}

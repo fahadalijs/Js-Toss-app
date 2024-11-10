@@ -1,45 +1,42 @@
-// console.log(Toss-app);
+let max=2;
+let min=1;
 
-let h1 = document.querySelector("#heading");
-let h2 = document.querySelector("h2")
-function tossbtn(index) {
-    console.log(index);
-    h1.innerHTML = index
+let paragraph = document.querySelector(".para");
+let tossImg = document.querySelector("img");
 
-    let x = Math.ceil(Math.random()*2)
-    console.log(x);
-   
-    if  ( x === 1 ) {
-        console.log("You win the Toss");
-        h2.innerHTML = "you win the Toss"
+
+function toss(recieve){
+    
+    let randomNum = Math.round(Math.random() + max - min);
+    console.log(randomNum);
+
+    if(randomNum==1){
+
+        tossImg.src =
+        "assets/heads.png";
 
     }else{
-        console.log("loss");
-        h2.innerHTML = "You Loss the Toss"
+        tossImg.src = "assets/tails.png";
+
     }
+
+
+    if((recieve=='HEADS' && randomNum==1 ) || (recieve=='TAILS' && randomNum==2)){
+        paragraph.innerHTML = `Congratulations! 🎉 you won the toss.<br><button  type="button" onclick="tossAgain()" class="btn btn-danger bttn">TOSS AGAIN</button>`;
+    }else{
+        paragraph.innerHTML = `Sorry , You lose the toss <br><button  type="button" onclick="tossAgain()" class="btn btn-danger bttn">TOSS AGAIN</button>`;
+    }
+
     
+
 
 }
 
- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function tossAgain() {
+  paragraph.innerHTML = "";
+  tossImg.src = "";
+}
 
 
 
